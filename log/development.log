@@ -1,0 +1,2551 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (42.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:12:23) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'streams'):
+  app/controllers/streams_controller.rb:27:in `new'
+  app/controllers/streams_controller.rb:27:in `new'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (165.2ms)
+Rendered rescues/_request_and_response (2.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStreams (20100814020504)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (18.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100814020504')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("streams")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 21:13:59) [GET]
+
+ActionController::RoutingError (No route matches "/stream/new" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 21:14:01) [GET]
+
+ActionController::RoutingError (No route matches "/stream/new" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:14:03) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 327ms (View: 314, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:14:18) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:14:25) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:14:53) [GET]
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 38ms (View: 27, DB: 0) | 200 OK [http://0.0.0.0/streams/]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:14:55) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 22ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:18:52) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:21:04) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 213ms (View: 199, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:26:13) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 256ms (View: 242, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:28:43) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:29:12) [GET]
+  [4;36;1mStream Load (0.5ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 46ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:29:15) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:39:58) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 271ms (View: 258, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#create (for 127.0.0.1 at 2010-08-13 21:40:03) [POST]
+  Parameters: {"commit"=>"Create", "stream"=>{"name"=>"blah", "description"=>"blah"}, "authenticity_token"=>"1Zd/5vynRec0SiJcNvKPqK5NrbUtQVYXiKqOTB9oinE="}
+  [4;36;1mStream Create (20.9ms)[0m   [0;1mINSERT INTO "streams" ("name", "created_at", "updated_at", "description") VALUES('blah', '2010-08-14 02:40:03', '2010-08-14 02:40:03', 'blah')[0m
+Redirected to http://0.0.0.0:3000/streams/1
+Completed in 66ms (DB: 21) | 302 Found [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:40:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 40ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:40:05) [GET]
+  [4;36;1mStream Load (0.7ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 34ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:40:13) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 22ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:41:03) [GET]
+  [4;35;1mStream Load (0.7ms)[0m   [0mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:41:18) [GET]
+  [4;36;1mStream Load (0.9ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #9 of app/views/streams/index.html.erb:
+6: 
+7: <% @streams.each do |stream| %>
+8:   <tr>
+9: 	<td><%= @stream.name %></td>
+10:     <td><%= link_to 'Show', stream %></td>
+11:     <td><%= link_to 'Edit', edit_stream_path(stream) %></td>
+12:     <td><%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/streams/index.html.erb:9
+    app/views/streams/index.html.erb:7:in `each'
+    app/views/streams/index.html.erb:7
+    app/controllers/streams_controller.rb:7:in `index'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (180.4ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:41:26) [GET]
+  [4;35;1mStream Load (0.7ms)[0m   [0mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 35ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:41:34) [GET]
+  [4;36;1mStream Load (0.7ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:41:57) [GET]
+  [4;35;1mStream Load (0.7ms)[0m   [0mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 33ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:42:22) [GET]
+  [4;36;1mStream Load (0.7ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 33ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:42:34) [GET]
+  [4;35;1mStream Load (0.7ms)[0m   [0mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 32ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 21:42:39) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 21ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/streams/new]
+
+
+Processing StreamsController#create (for 127.0.0.1 at 2010-08-13 21:42:44) [POST]
+  Parameters: {"commit"=>"Create", "stream"=>{"name"=>"reddit", "description"=>"rockcs"}, "authenticity_token"=>"1Zd/5vynRec0SiJcNvKPqK5NrbUtQVYXiKqOTB9oinE="}
+  [4;36;1mStream Create (0.4ms)[0m   [0;1mINSERT INTO "streams" ("name", "created_at", "updated_at", "description") VALUES('reddit', '2010-08-14 02:42:44', '2010-08-14 02:42:44', 'rockcs')[0m
+Redirected to http://0.0.0.0:3000/streams/2
+Completed in 21ms (DB: 0) | 302 Found [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:42:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 2) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/streams/2]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 21:42:46) [GET]
+  [4;36;1mStream Load (3.4ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 36ms (View: 21, DB: 3) | 200 OK [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:42:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:44:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 30ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:44:58) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:44:58) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-13 21:44:58) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:16:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:49:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 37ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:49:49) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:49:49) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#flash to swf (for 127.0.0.1 at 2010-08-13 21:49:50) [GET]
+  Parameters: {"id"=>"Broadcaster"}
+
+ActionController::UnknownAction (No action responded to flash. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:50:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:50:13) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:50:13) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#flash to swf (for 127.0.0.1 at 2010-08-13 21:50:17) [GET]
+  Parameters: {"id"=>"Broadcaster"}
+
+ActionController::UnknownAction (No action responded to flash. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:50:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 214ms (View: 200, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:50:39) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:50:39) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 21:50:40) [GET]
+
+ActionController::RoutingError (No route matches "/flash/framework_4.1.0.16076.swf" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:51:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:51:16) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:51:16) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 21:51:16) [GET]
+
+ActionController::RoutingError (No route matches "/flash/textLayout_1.1.0.604.swf" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:51:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:51:27) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:51:27) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 21:51:31) [GET]
+
+ActionController::RoutingError (No route matches "/flash/osmf_flex.4.0.0.13495.swf" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:51:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:51:43) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:51:43) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 21:51:48) [GET]
+
+ActionController::RoutingError (No route matches "/flash/rpc_4.1.0.16076.swf" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 21:52:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.5ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 19ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 21:52:02) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 21:52:02) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 22:04:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 25ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 22:04:58) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 22:04:58) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 22:07:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 22:07:01) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 22:07:01) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 22:07:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 35ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 22:07:58) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 22:07:58) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-13 22:07:58) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to swf (for 127.0.0.1 at 2010-08-13 22:07:59) [GET]
+  Parameters: {"id"=>"Receiver"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=Receiver):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 22:08:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 29ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 22:08:40) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 22:08:40) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-13 22:08:40) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-13 22:08:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.5ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 115ms (View: 101, DB: 0) | 200 OK [http://0.0.0.0/streams/broadcast/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 22:08:57) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 22:08:57) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 22:21:26) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#create (for 127.0.0.1 at 2010-08-13 22:21:36) [POST]
+  Parameters: {"commit"=>"Create", "stream"=>{"name"=>"test", "description"=>"test\r\n"}, "authenticity_token"=>"8ZFJUVmQ1pcp6YDByP8Oqav5tLABJsVCSLJfHoTLqww="}
+  [4;35;1mStream Create (0.4ms)[0m   [0mINSERT INTO "streams" ("name", "created_at", "updated_at", "description") VALUES('test', '2010-08-14 03:21:36', '2010-08-14 03:21:36', 'test
+')[0m
+Redirected to http://0.0.0.0:3000/streams/3
+Completed in 20ms (DB: 0) | 302 Found [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 22:21:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mStream Load (0.5ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 3) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/streams/3]
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 22:21:36) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 22:21:36) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-13 22:21:36) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.3ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (153.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 22:27:20) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#create (for 127.0.0.1 at 2010-08-13 22:27:33) [POST]
+  Parameters: {"commit"=>"Create", "stream"=>{"name"=>"Eduardo's birthday", "description"=>"celebration"}, "authenticity_token"=>"8ZFJUVmQ1pcp6YDByP8Oqav5tLABJsVCSLJfHoTLqww="}
+  [4;36;1mStream Create (20.5ms)[0m   [0;1mINSERT INTO "streams" ("name", "created_at", "updated_at", "description") VALUES('Eduardo''s birthday', '2010-08-14 03:27:33', '2010-08-14 03:27:33', 'celebration')[0m
+Redirected to http://0.0.0.0:3000/streams/4
+Completed in 62ms (DB: 20) | 302 Found [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 22:27:34) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 4) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/streams/4]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-13 22:27:34) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-13 22:27:34) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-13 22:27:34) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcaster (for 127.0.0.1 at 2010-08-13 22:27:48) [GET]
+  Parameters: {"id"=>"4"}
+
+ActionController::UnknownAction (No action responded to broadcaster. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-13 22:27:53) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mStream Load (19.7ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 4) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 37ms (View: 4, DB: 20) | 200 OK [http://0.0.0.0/streams/broadcast/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 22:27:53) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-13 22:27:53) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-13 22:32:10) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 124ms (View: 110, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mStream Load (26.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) LIMIT 1[0m
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:16:54) [GET]
+  [4;36;1mStream Load (6.5ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Completed in 409ms (View: 391, DB: 6) | 200 OK [http://0.0.0.0/streams.xml]
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-13 23:18:03) [GET]
+  [4;35;1mStream Load (1.2ms)[0m   [0mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 338ms (View: 325, DB: 1) | 200 OK [http://0.0.0.0/streams/]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:23:57) [GET]
+  [4;36;1mStream Load (14.3ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Completed in 259ms (View: 197, DB: 14) | 200 OK [http://0.0.0.0/streams.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:27:07) [GET]
+  [4;35;1mStream Load (42.5ms)[0m   [0mSELECT * FROM "streams" [0m
+Completed in 186ms (View: 117, DB: 42) | 200 OK [http://localhost/streams.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:27:34) [GET]
+  [4;36;1mStream Load (17.9ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Completed in 61ms (View: 29, DB: 18) | 200 OK [http://localhost/streams.xml]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-13 23:37:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (11.9ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 105ms (View: 44, DB: 12) | 200 OK [http://localhost/streams/1.xml]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 23:38:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.5ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 265ms (View: 227, DB: 1) | 200 OK [http://localhost/streams/1]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-13 23:38:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (27.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 46ms (View: 3, DB: 27) | 200 OK [http://localhost/streams/1]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-13 23:41:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (28.1ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 140ms (View: 56, DB: 28) | 200 OK [http://localhost/streams/1.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:42:10) [GET]
+  [4;35;1mStream Load (1.2ms)[0m   [0mSELECT * FROM "streams" [0m
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/streams.xml]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-13 23:42:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (0.5ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 18ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/streams/1.xml]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-13 23:43:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (3.9ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 23ms (View: 5, DB: 4) | 200 OK [http://localhost/streams/1.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:49:08) [GET]
+  [4;36;1mStream Load (6.9ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Completed in 30ms (View: 11, DB: 7) | 200 OK [http://0.0.0.0/streams.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:50:36) [GET]
+  [4;35;1mStream Load (23.0ms)[0m   [0mSELECT * FROM "streams" [0m
+Completed in 69ms (View: 34, DB: 23) | 200 OK [http://localhost/streams.xml]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-13 23:56:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (20.4ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 38ms (View: 5, DB: 20) | 200 OK [http://localhost/streams/1.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-13 23:57:48) [GET]
+  [4;35;1mStream Load (14.3ms)[0m   [0mSELECT * FROM "streams" [0m
+Completed in 55ms (View: 29, DB: 14) | 200 OK [http://localhost/streams.xml]
+
+
+Processing StreamsController#index to xml (for 127.0.0.1 at 2010-08-14 00:00:36) [GET]
+  [4;36;1mStream Load (22.1ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Completed in 44ms (View: 11, DB: 22) | 200 OK [http://localhost/streams.xml]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-14 00:00:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 18ms (View: 5, DB: 0) | 200 OK [http://localhost/streams/1.xml]
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-14 00:01:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mStream Load (16.0ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 2) [0m
+Completed in 34ms (View: 5, DB: 16) | 200 OK [http://localhost/streams/2.xml]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:11:12) [GET]
+
+ActionController::RoutingError (No route matches "/stream/1" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:11:18) [GET]
+
+ActionController::RoutingError (No route matches "/stream/show/1" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 00:11:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (18.8ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 77ms (View: 29, DB: 19) | 200 OK [http://0.0.0.0/streams/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:11:22) [GET]
+
+ActionController::RoutingError (No route matches "/streams/show/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 00:11:22) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (159.2ms)
+Rendered rescues/_request_and_response (22.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:11:22) [GET]
+
+ActionController::RoutingError (No route matches "/streams/show/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 00:11:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 31ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 00:11:27) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 00:11:27) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 00:11:28) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 00:11:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (11.7ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 28ms (View: 3, DB: 12) | 200 OK [http://0.0.0.0/streams/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:11:32) [GET]
+
+ActionController::RoutingError (No route matches "/streams/show/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 00:11:32) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:11:32) [GET]
+
+ActionController::RoutingError (No route matches "/streams/show/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to xml (for 127.0.0.1 at 2010-08-14 00:11:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStream Load (12.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Completed in 30ms (View: 5, DB: 12) | 200 OK [http://0.0.0.0/streams/1.xml]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:20:44) [GET]
+
+ActionController::RoutingError (No route matches "/broadcaster/show/1" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:20:48) [GET]
+
+ActionController::RoutingError (No route matches "/broadcast/show/1" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:20:52) [GET]
+
+ActionController::RoutingError (No route matches "/broadcast/1" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 00:20:59) [GET]
+
+ActionController::RoutingError (No route matches "/broadcast/" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 00:21:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (30.0ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 66ms (View: 22, DB: 30) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 00:21:55) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 00:21:55) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 00:21:55) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 02:44:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (65.8ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 4294ms (View: 2357, DB: 66) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 02:44:41) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (8.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.8ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 02:44:41) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 02:44:42) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 02:45:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStream Load (13.5ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 1) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 56ms (View: 6, DB: 13) | 200 OK [http://0.0.0.0/streams/1]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 02:46:02) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 02:46:02) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.3ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.5ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 02:46:03) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-14 14:01:15) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 3341ms (View: 2186, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-14 15:50:36) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 301ms (View: 287, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#create (for 127.0.0.1 at 2010-08-14 15:50:49) [POST]
+  Parameters: {"commit"=>"Create", "stream"=>{"name"=>"fudge", "description"=>"munchkin"}, "authenticity_token"=>"okGhgS6OPRK+v/qOQJyzr4ZTR4vGRa2jHpXGV+nxuW0="}
+  [4;36;1mStream Create (18.8ms)[0m   [0;1mINSERT INTO "streams" ("name", "created_at", "updated_at", "description") VALUES('fudge', '2010-08-14 20:50:49', '2010-08-14 20:50:49', 'munchkin')[0m
+Redirected to http://0.0.0.0:3000/streams/5
+Completed in 82ms (DB: 19) | 302 Found [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 15:50:49) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mStream Load (0.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 5) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 48ms (View: 32, DB: 0) | 200 OK [http://0.0.0.0/streams/5]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 15:50:49) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 15:50:50) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 15:50:50) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.8ms)
+Rendered rescues/_request_and_response (41.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-14 15:51:09) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mStream Load (42.6ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 5) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 176ms (View: 118, DB: 43) | 200 OK [http://0.0.0.0/streams/broadcast/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 15:51:09) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 15:51:09) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2010-08-14 16:00:44) [GET]
+Rendering template within layouts/streams
+Rendering streams/new
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing StreamsController#create (for 127.0.0.1 at 2010-08-14 16:01:01) [POST]
+  Parameters: {"commit"=>"Create", "stream"=>{"name"=>"people", "description"=>"rock"}, "authenticity_token"=>"okGhgS6OPRK+v/qOQJyzr4ZTR4vGRa2jHpXGV+nxuW0="}
+  [4;36;1mStream Create (23.8ms)[0m   [0;1mINSERT INTO "streams" ("name", "created_at", "updated_at", "description") VALUES('people', '2010-08-14 21:01:01', '2010-08-14 21:01:01', 'rock')[0m
+Redirected to http://0.0.0.0:3000/streams/6
+Completed in 66ms (DB: 24) | 302 Found [http://0.0.0.0/streams]
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 16:01:01) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 6) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 19ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/streams/6]
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 16:01:02) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (212.5ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 16:01:02) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 16:01:02) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-14 16:01:14) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mStream Load (0.4ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 6) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/streams/broadcast/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:01:14) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:01:14) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#index (for 127.0.0.1 at 2010-08-14 16:04:41) [GET]
+  [4;36;1mStream Load (14.1ms)[0m   [0;1mSELECT * FROM "streams" [0m
+Rendering template within layouts/streams
+Rendering streams/index
+Completed in 104ms (View: 78, DB: 14) | 200 OK [http://0.0.0.0/streams/]
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-14 16:04:57) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mStream Load (0.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 5) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/streams/broadcast/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:04:58) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:04:58) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-14 16:09:41) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mStream Load (22.6ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 5) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 46ms (View: 6, DB: 23) | 200 OK [http://0.0.0.0/streams/broadcast/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:09:42) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:09:42) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#broadcast (for 127.0.0.1 at 2010-08-14 16:10:18) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mStream Load (0.5ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 5) [0m
+Rendering template within layouts/streams
+Rendering streams/broadcast
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/streams/broadcast/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:10:18) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.css" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-14 16:10:18) [GET]
+
+ActionController::RoutingError (No route matches "/streams/broadcast/history/history.js" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 16:10:33) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mStream Load (4.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 5) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 28ms (View: 5, DB: 4) | 200 OK [http://0.0.0.0/streams/5]
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 16:10:33) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 16:10:33) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 16:10:33) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 16:10:37) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mStream Load (15.3ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 4) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 37ms (View: 5, DB: 15) | 200 OK [http://0.0.0.0/streams/4]
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 16:10:37) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 16:10:37) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (178.9ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 16:10:37) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 16:10:49) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mStream Load (151.0ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 6) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 245ms (View: 74, DB: 151) | 200 OK [http://0.0.0.0/streams/6]
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 16:10:50) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 16:10:50) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 16:10:50) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#show (for 127.0.0.1 at 2010-08-14 16:23:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mStream Load (9.2ms)[0m   [0;1mSELECT * FROM "streams" WHERE ("streams"."id" = 6) [0m
+Rendering template within layouts/streams
+Rendering streams/show
+Completed in 34ms (View: 8, DB: 9) | 200 OK [http://0.0.0.0/streams/6]
+
+
+Processing StreamsController#show to js (for 127.0.0.1 at 2010-08-14 16:23:07) [GET]
+  Parameters: {"id"=>"swfobject"}
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM "streams" WHERE ("streams"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stream with ID=swfobject):
+  app/controllers/streams_controller.rb:27:in `show'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to css (for 127.0.0.1 at 2010-08-14 16:23:07) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StreamsController#history to js (for 127.0.0.1 at 2010-08-14 16:23:07) [GET]
+  Parameters: {"id"=>"history"}
+
+ActionController::UnknownAction (No action responded to history. Actions: broadcast, create, destroy, edit, index, new, show, and update):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
