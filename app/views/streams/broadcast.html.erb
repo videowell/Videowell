@@ -1,14 +1,6 @@
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">	
-    <!-- 
-    Smart developers always View Source. 
-    
-    This application was built using Adobe Flex, an open source framework
-    for building rich Internet applications that get delivered via the
-    Flash Player or to desktops via Adobe AIR. 
-    
-    Learn more about Flex at http://flex.org 
-    // -->
+
+
     <head>
         <title></title>
         <meta name="google" value="notranslate">         
@@ -22,7 +14,7 @@
         <style type="text/css" media="screen"> 
 			html, body	{ height:100%; }
 			body { margin:0; padding:0; overflow:auto; text-align:center; 
-			       background-color: #ffffff; }   
+			        }   
 			object:focus { outline:none; }
 			#flashContent { display:none; }
         </style>
@@ -52,14 +44,14 @@
             attributes.align = "middle";
             swfobject.embedSWF(
                 "/flash/Broadcaster.swf", "flashContent", 
-                "100%", "100%", 
+                "320px", "240px", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
 			<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
 			swfobject.createCSS("#flashContent", "display:block;text-align:left;");
         </script>
     </head>
-    <body>
+
         <!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough 
 			 JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
 			 when JavaScript is disabled.
@@ -103,9 +95,12 @@
                 </object>
                 <!--<![endif]-->
             </object>
-	    </noscript>		
-   </body>
-</html>
+	    </noscript>	
+	<br/>	
+	Stream Name<br/>
+ <%= @stream.name %><br/>
+Stream Description<br/>
+<%= @stream.description%>
 
-<%= link_to 'Edit', edit_stream_path(@stream) %> |
-<%= link_to 'Back', streams_path %>
+<% link_to 'Edit', edit_stream_path(@stream) %> |
+<% link_to 'Back', streams_path %>

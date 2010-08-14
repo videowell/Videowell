@@ -15,8 +15,8 @@
 	</tr>
   <tr>
     <td><%= link_to 'Show', stream %></td>
-    <td><%= link_to 'Edit', edit_stream_path(stream) %></td>
-    <td><%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><% link_to 'Edit', edit_stream_path(stream) %></td>
+    <td><% link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
