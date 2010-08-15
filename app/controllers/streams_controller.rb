@@ -1,7 +1,7 @@
 class StreamsController < ApplicationController
   # GET /streams
   # GET /streams.xml
-  before_filter :login_required, :only => [:show]
+  before_filter :login_required, :only => [:broadcast, :new]
   
   def index
     @streams = Stream.all
@@ -38,7 +38,7 @@ class StreamsController < ApplicationController
   # GET /streams/new.xml
   def new
     @stream = Stream.new
-
+    @stream.user_id = current_user.id
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @stream }

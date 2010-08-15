@@ -12,6 +12,7 @@ class TwitterAuthMigration < ActiveRecord::Migration
       # This information is automatically kept
       # in-sync at each login of the user. You
       # may remove any/all of these columns.
+      t.string :subscribe
       t.string :name
       t.string :location
       t.string :description

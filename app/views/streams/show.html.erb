@@ -34,7 +34,7 @@
         <link rel="stylesheet" type="text/css" href="history/history.css" />
         <script type="text/javascript" src="history/history.js"></script>
         <!-- END Browser History required section -->  
-		    
+		 <div style="float:left; margin-left:50px; margin-top:50px;">
         <script type="text/javascript" src="swfobject.js"></script>
         <script type="text/javascript">
             <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. --> 
@@ -43,7 +43,7 @@
             var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
 			flashvars.rubyname = "<%=@stream.name%>";
-            var params = {};
+            var params = { scale: "exactFit"};
             params.quality = "high";
             params.bgcolor = "#ffffff";
             params.allowscriptaccess = "sameDomain";
@@ -54,7 +54,7 @@
             attributes.align = "middle";
             swfobject.embedSWF(
                 "/flash/Receiver.swf", "flashContent", 
-                "640px", "480px", 
+                "100%", "100%", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
 			<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
@@ -66,7 +66,12 @@
 			 JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
 			 when JavaScript is disabled.
 		-->
-        <div id="flashContent">
+			<% if @stream.paid=="yes" && current_user.subscribe == "yes"%>
+		<div id="wrapper" style="width:480px">
+			
+        <div id="flashContent" style="display: block;
+		   width: 100%;
+		   height: 100%;">
         	<p>
 	        	To view this page ensure that Adobe Flash Player version 
 				10.1.0 or greater is installed. 
@@ -76,8 +81,21 @@
 				document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" 
 								+ pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" ); 
 			</script> 
+			
+		
         </div>
-	   	
+	   	</div>
+	<% else %>
+	you need to subscribe to see this stream<br/>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value=<%=Stream::PAYPALBUTTON %> >
+	<input type="image" src="http://videowell.heroku.com/images/watch.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+	
+	<% end %>	
+
        	<noscript>
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="Receiver">
                 <param name="movie" value="Receiver.swf" />
@@ -106,18 +124,16 @@
                 <!--<![endif]-->
             </object>
 	    </noscript>		
+	</div>
+		<a href="http://twitter.com/share" class="twitter-share-button">Tweet</a><br/>
+	<textarea rows="2">
+		<object type="application/x-shockwave-flash" height="640" width="480" id="live_embed_player_flash" data="http://0.0.0.0:3000/flash/Receiver.swf?<%=@stream.name%>"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://0.0.0.0:3000/flash/Receiver.swf" /><param name="flashvars" value="<%=@stream.name%>" /></object><a href="http://<%=Stream::SITEDOMAIN%>/stream/1" class="trk" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline; text-align:center;">Watch now on videowell.org</a></textarea><br/>
+		
+<div style="float:left; margin-left:50px">
+	<iframe src='http://cw.gabbly.com/gabbly/cw.jsp?e=1&t=http://<%=Stream::SITEDOMAIN %>/streams/<%=params[:id]%>' scrolling='no' style='width:630px; height:250px' frameborder='0'></iframe>
+	</div>
    </body>
 </html><br/>
-	<a href="http://twitter.com/share" class="twitter-share-button">Tweet</a><br/>
-<textarea rows="2">
-	<object type="application/x-shockwave-flash" height="640" width="480" id="live_embed_player_flash" data="http://0.0.0.0:3000/flash/Receiver.swf?<%=@stream.name%>"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://0.0.0.0:3000/flash/Receiver.swf" /><param name="flashvars" value="<%=@stream.name%>" /></object><a href="http://<%=Stream::SITEDOMAIN%>/stream/1" class="trk" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline; text-align:center;">Watch now on videowell.org</a></textarea><br/>
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="hosted_button_id" value="36XXBCPRQRME6">
-	<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></br>
-	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-	</form>
-	
-<iframe src='http://cw.gabbly.com/gabbly/cw.jsp?e=1&t=http://<%=Stream::SITEDOMAIN %>/streams/<%=params[:id]%>' scrolling='no' style='width:630px; height:250px' frameborder='0'></iframe>
+
 
 

@@ -4,26 +4,48 @@
 <%= link_to 'Start a New Stream', new_stream_path %><br/><br/>
 <table align="center">
   <tr>
+	<td>Stream Creator</td>
 	<td>Watch Stream</td>
 <td>Description</td>
 <td>Broadcast</td> 
- <td>edit</td>
-<td>destroy</td>
+
+ <td></td>
+<td></td>
+
 </tr>
 
 <% @streams.each do |stream| %>
   <tr>
+		<% username = User.find(stream.user_id)%>
+		
+		<td>
+		<img src="http://img.tweetimag.es/i/<%=username.login %>_n"/>
+		<%= username.login %>
+		</td>
+		<td><%= link_to stream.name, :controller => "streams", :action => "show", :id => stream.id %></td>
 
-	<td><%= link_to stream.name, stream %></td>
 
 		
 
 	
 
 	<td><%= stream.description %></td>
-	<td><a href="/streams/broadcast/<%=stream.id%>">start broadcast</a></td>   
-    <td><%= link_to 'Edit', edit_stream_path(stream) %></td>
-    <td><%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td>
+		<% if current_user.id == stream.user_id%>
+		<a href="/streams/broadcast/<%=stream.id%>">start broadcast</a>
+		<% end %>
+		</td>   
+		
+    <td>
+<% if current_user.id == stream.user_id%>
+<%= link_to 'Edit', edit_stream_path(stream) %></td>
+<% end %>
+    <td>
+<% if current_user.id == stream.user_id%>
+<%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+</td>
+
   </tr>
 <% end %>
 </table>

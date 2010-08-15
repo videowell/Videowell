@@ -12,9 +12,9 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; }
+a { color: blue; }
+a:visited { color: blue; }
+
 
 .fieldWithErrors {
   padding: 2px;
@@ -55,21 +55,26 @@ a:hover { color: #fff; }
 body {
 	font: 100% Helvetica,Verdana, Arial, sans-serif;
 	width: 100%;
-	background: url(/images/bg.png) no-repeat center top;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
 	color: #000000;
 	
 }
+
+.splash  {
+	
+		background: url(/images/bg.png) no-repeat center top;
+	
+}
 .oneColFixCtr #container {
 	width: 780px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
-
+	
 	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
 	
 	text-align: left; /* this overrides the text-align: center on the body element. */
 }
 .oneColFixCtr #mainContent {
-	
+
 	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
 }
