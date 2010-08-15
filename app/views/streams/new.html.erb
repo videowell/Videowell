@@ -9,7 +9,8 @@
 	<%= f.label :description %><br />
     <%= f.text_area(:description , :cols => 75, :rows => 2) %><br/>
 <%= f.label :paid %><br />
-<%=check_box("stream", "paid", {}, "no", "yes") %>
+
+<%=check_box("stream", "paid", {}, "yes", "no") %>
 <%= f.hidden_field :user_id, :value => current_user.id  %><br/>
     <%= f.submit 'Create' %>
 

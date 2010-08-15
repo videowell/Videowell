@@ -69,6 +69,7 @@ Video
 			 JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
 			 when JavaScript is disabled.
 		-->
+			<% if current_user.subscribe == "ye"%>
 		<div id="wrapper">
         <div id="flashContent" style="display: block;
 		   width: 100%;
@@ -85,6 +86,17 @@ Video
 			
         </div>
 	   	</div>
+	
+		<% else current_user.subscribe == "no"%>
+		you need to subscribe to see this stream<br/>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value=<%=Stream::PAYPALBUTTON %> >
+		<input type="image" src="http://videowell.heroku.com/images/watch.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+
+		<% end %>
        	<noscript>
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="Receiver">
                 <param name="movie" value="Receiver.swf" />

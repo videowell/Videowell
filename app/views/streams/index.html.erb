@@ -1,16 +1,20 @@
 
-<div style="text-align:center">
-<h1 style="font-family:'Chunk'">Listing streams</h1>
+<div style="width: 500px; margin-left: auto;
+margin-right: auto;">
+<h1 >Available Streams</h1>
 <%= link_to 'Start a New Stream', new_stream_path %><br/><br/>
-<table align="center">
+<table style="margin-left: auto;
+margin-right: auto;">
+	<table>
   <tr>
-	<td>Stream Creator</td>
-	<td>Watch Stream</td>
-<td>Description</td>
-<td>Broadcast</td> 
+	<td valign="bottom">Producer</td>
+	<td valign="bottom">Stream</td>
+<td valign="bottom">Paid</td>
 
- <td></td>
-<td></td>
+<td valign="bottom">Broadcast</td> 
+
+ <td valign="bottom"></td>
+<td valign="bottom"></td>
 
 </tr>
 
@@ -18,31 +22,41 @@
   <tr>
 		<% username = User.find(stream.user_id)%>
 		
-		<td>
+		<td valign="bottom">
 		<img src="http://img.tweetimag.es/i/<%=username.login %>_n"/>
-		<%= username.login %>
+	
 		</td>
-		<td><%= link_to stream.name, :controller => "streams", :action => "show", :id => stream.id %></td>
+		<% if stream.paid == "yes"%>
+		<td valign="bottom"><%= link_to stream.name, :controller => "streams", :action => "paid", :id => stream.id %></td>
+		<% else %>
+		<td valign="bottom"><%= link_to stream.name, :controller => "streams", :action => "show", :id => stream.id %></td>
+		<% end %>
 
-
+<td valign="bottom"><%=stream.paid%></td>
 		
 
 	
 
-	<td><%= stream.description %></td>
-	<td>
+	
+	<td valign="bottom">
+		<% unless current_user==nil%>
 		<% if current_user.id == stream.user_id%>
-		<a href="/streams/broadcast/<%=stream.id%>">start broadcast</a>
+		<% end %>
+		<a href="/streams/broadcast/<%=stream.id%>">go live</a>
 		<% end %>
 		</td>   
 		
-    <td>
+    <td valign="bottom">
+	<% unless current_user==nil%>
 <% if current_user.id == stream.user_id%>
-<%= link_to 'Edit', edit_stream_path(stream) %></td>
 <% end %>
-    <td>
+<%= link_to 'change', edit_stream_path(stream) %></td>
+<% end %>
+    <td valign="bottom">
+	<% unless current_user==nil%>
 <% if current_user.id == stream.user_id%>
-<%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+<%= link_to 'delete', stream, :confirm => 'Are you sure?', :method => :delete %>
 <% end %>
 </td>
 

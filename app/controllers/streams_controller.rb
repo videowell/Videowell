@@ -1,7 +1,7 @@
 class StreamsController < ApplicationController
   # GET /streams
   # GET /streams.xml
-  before_filter :login_required, :only => [:broadcast, :new]
+  before_filter :login_required, :only => [:broadcast, :new, :paid]
   
   def index
     @streams = Stream.all
@@ -25,6 +25,16 @@ class StreamsController < ApplicationController
 
   # GET /streams/1
   # GET /streams/1.xml
+  def paid
+    @stream = Stream.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @stream }
+    end
+  end
+  
+  
   def show
     @stream = Stream.find(params[:id])
 

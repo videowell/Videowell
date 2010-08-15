@@ -1,6 +1,9 @@
+td {
+	
+	
 
-
-body, p, ol, ul, td {
+}
+body, p, ol, ul {
   font-family: helvetica, arial, sans-serif;
   font-size:   13px;
   line-height: 18px;
@@ -12,8 +15,8 @@ pre {
   font-size: 11px;
 }
 
-a { color: blue; }
-a:visited { color: blue; }
+a { font-family: helvetica, arial, sans-serif; color: blue; }
+a:visited {font-family: helvetica, arial, sans-serif; color: blue; }
 
 
 .fieldWithErrors {
@@ -29,6 +32,20 @@ a:visited { color: blue; }
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+}
+
+.list a {
+	line-height:48px;
+	font-size:42px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.list  {
+	line-height:48px;
+	font-size:42px;
+	font-weight:bold;
+	text-decoration:none;
 }
 
 #errorExplanation h2 {
@@ -53,18 +70,20 @@ a:visited { color: blue; }
 }
 
 body {
-	font: 100% Helvetica,Verdana, Arial, sans-serif;
+	font-family: helvetica, arial, sans-serif;
+	
 	width: 100%;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
 	color: #000000;
+	background:;
 	
 }
 
 .splash  {
 	
-		background: url(/images/bg.png) no-repeat center top;
+		background: #999999 url(/images/bg.jpg) no-repeat center top;
 	
 }
 .oneColFixCtr #container {
