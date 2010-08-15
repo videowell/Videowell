@@ -33,6 +33,7 @@
             var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
 			flashvars.rubyname = "<%=@stream.name%>";
+			flashvars.dkey = "<%=Stream::DEVKEY%>";
             var params = {};
             params.quality = "high";
             params.bgcolor = "#ffffff";
