@@ -1,7 +1,7 @@
 class StreamsController < ApplicationController
   # GET /streams
   # GET /streams.xml
-  
+  before_filter :login_required, , :only => [:show]
   
   def index
     @streams = Stream.all

@@ -7550,3 +7550,4 @@ ActionController::RoutingError (No route matches "/streams/show/history/history.
   /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+** TwitterAuth initialized properly.
