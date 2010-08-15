@@ -1,26 +1,29 @@
 
 <div style="text-align:center">
 <h1 style="font-family:'Chunk'">Listing streams</h1>
-<%= link_to 'New stream', new_stream_path %><br/>
+<%= link_to 'Start a New Stream', new_stream_path %><br/><br/>
 <table align="center">
   <tr>
-  </tr>
+	<td>Watch Stream</td>
+<td>Description</td>
+<td>Broadcast</td> 
+ <td>edit</td>
+<td>destroy</td>
+</tr>
 
 <% @streams.each do |stream| %>
   <tr>
 
 	<td><%= link_to stream.name, stream %></td>
-  </tr>
-  <tr>
-	<td>Description</td>
-	</tr>
-	<tr>
+
+		
+
+	
+
 	<td><%= stream.description %></td>
-	</tr>
-  <tr>
-   
-    <td><% link_to 'Edit', edit_stream_path(stream) %></td>
-    <td><% link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><a href="/streams/broadcast/<%=stream.id%>">start broadcast</a></td>   
+    <td><%= link_to 'Edit', edit_stream_path(stream) %></td>
+    <td><%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

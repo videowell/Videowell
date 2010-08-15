@@ -14,7 +14,7 @@ pre {
 
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a:hover { color: #fff; }
 
 .fieldWithErrors {
   padding: 2px;
@@ -53,7 +53,7 @@ a:hover { color: #fff; background-color:#000; }
 }
 
 body {
-	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	font: 100% Helvetica,Verdana, Arial, sans-serif;
 	width: 100%;
 	background: url(/images/bg.png) no-repeat center top;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */

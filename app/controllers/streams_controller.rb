@@ -1,6 +1,8 @@
 class StreamsController < ApplicationController
   # GET /streams
   # GET /streams.xml
+  
+  
   def index
     @streams = Stream.all
 

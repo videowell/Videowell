@@ -1,12 +1,16 @@
-<h1>Editing stream</h1>
+<h1>Edit stream</h1>
 
 <% form_for(@stream) do |f| %>
   <%= f.error_messages %>
 
   <p>
+	<%= f.label :name %><br />
+    <%= f.text_area(:name , :cols => 75, :rows => 2) %><br/>
+	<%= f.label :description %><br />
+    <%= f.text_area(:description , :cols => 75, :rows => 2) %><br/>
     <%= f.submit 'Update' %>
+
   </p>
 <% end %>
 
-<%= link_to 'Show', @stream %> |
 <%= link_to 'Back', streams_path %>
