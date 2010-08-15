@@ -28,7 +28,7 @@
 			#flashContent { display:none; }
         </style>
 		<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-		<a href="http://twitter.com/share" class="twitter-share-button">Tweet</a>
+	
 		<!-- Enable Browser History by replacing useBrowserHistory tokens with two hyphens -->
         <!-- BEGIN Browser History required section -->
         <link rel="stylesheet" type="text/css" href="history/history.css" />
@@ -54,7 +54,7 @@
             attributes.align = "middle";
             swfobject.embedSWF(
                 "/flash/Receiver.swf", "flashContent", 
-                "100%", "100%", 
+                "640px", "480px", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
 			<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
@@ -107,6 +107,6 @@
             </object>
 	    </noscript>		
    </body>
-</html>
-
-<iframe src='http://cw.gabbly.com/gabbly/cw.jsp?e=1&t=http://videowell.heroku.com/streams/<%=params[:id]%>' scrolling='no' style='width:300px; height:250px' frameborder='0'></iframe>
+</html><br/>
+	<a href="http://twitter.com/share" class="twitter-share-button">Tweet</a><br/>
+<iframe src='http://cw.gabbly.com/gabbly/cw.jsp?e=1&t=http://videowell.heroku.com/streams/<%=params[:id]%>' scrolling='no' style='width:630px; height:250px' frameborder='0'></iframe>
